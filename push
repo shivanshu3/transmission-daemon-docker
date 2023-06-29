@@ -1,2 +1,2 @@
 #!/bin/sh
-docker push shivanshu/transmission:4.0.3.1
+docker push shivanshu/transmission:4.0.3.2

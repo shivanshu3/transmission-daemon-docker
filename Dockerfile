@@ -36,7 +36,7 @@ RUN mkdir build && \
         -DENABLE_QT=OFF \
         -DENABLE_UTILS=OFF \
         .. && \
-    make -j 32
+    make -j 40
 
 VOLUME /config
 

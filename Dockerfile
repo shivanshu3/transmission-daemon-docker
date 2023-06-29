@@ -10,8 +10,6 @@ RUN apt update && \
         libssl-dev \
         python3
 
-COPY entrypoint.sh /
-
 RUN mkdir /transmission_build
 WORKDIR /transmission_build
 
@@ -40,4 +38,5 @@ RUN mkdir build && \
 
 VOLUME /config
 
+COPY entrypoint.sh /
 CMD ["/entrypoint.sh"]

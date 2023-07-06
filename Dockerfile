@@ -2,12 +2,15 @@ FROM debian:12
 
 RUN apt update && \
     apt install -y \
-        git \
-        gosu \
         build-essential \
         cmake \
+        curl \
+        git \
+        gosu \
         libcurl4-openssl-dev \
         libssl-dev \
+        netcat-openbsd \
+        procps \
         python3
 
 RUN mkdir /transmission_build

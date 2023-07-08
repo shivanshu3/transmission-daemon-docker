@@ -1,2 +1,0 @@
-#!/bin/sh
-docker push shivanshu/transmission:4.0.3.3

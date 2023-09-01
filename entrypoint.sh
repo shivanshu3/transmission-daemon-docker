@@ -10,7 +10,7 @@ if [ -z "$PGID" ]; then
     exit 1
 fi
 
-export TRANSMISSION_WEB_HOME=/transmission_build/transmission-4.0.3/web/public_html
+export TRANSMISSION_WEB_HOME=/transmission_build/transmission-4.0.4/web/public_html
 
 exec gosu "$PUID:$PGID" \
     ./build/daemon/transmission-daemon --foreground --log-level info \

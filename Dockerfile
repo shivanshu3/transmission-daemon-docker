@@ -16,15 +16,9 @@ RUN apt update && \
 RUN mkdir /transmission_build
 WORKDIR /transmission_build
 
-ADD https://github.com/transmission/transmission/releases/download/4.0.3/transmission-4.0.3.tar.xz ./
-RUN tar xf transmission-4.0.3.tar.xz
-WORKDIR /transmission_build/transmission-4.0.3
-
-# Apply this patch to fix broken magnet links:
-# https://github.com/transmission/transmission/pull/5460
-RUN mkdir ./patches
-ADD https://github.com/transmission/transmission/commit/2be3ecfd275bfcd187a42b0ca2cf50420838de53.patch ./patches/
-RUN cat ./patches/2be3ecfd275bfcd187a42b0ca2cf50420838de53.patch | patch -p1
+ADD https://github.com/transmission/transmission/releases/download/4.0.4/transmission-4.0.4.tar.xz ./
+RUN tar xf transmission-4.0.4.tar.xz
+WORKDIR /transmission_build/transmission-4.0.4
 
 RUN mkdir build && \
     cd build && \

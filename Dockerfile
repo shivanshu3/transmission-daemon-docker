@@ -31,7 +31,7 @@ RUN mkdir build && \
         -DENABLE_QT=OFF \
         -DENABLE_UTILS=OFF \
         .. && \
-    make -j 40
+    make -j $(nproc)
 
 VOLUME /config
 
